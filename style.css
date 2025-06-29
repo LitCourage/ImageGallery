@@ -2,4 +2,112 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
+
+header {
+    display: flex;
+    padding: 12px;
+    background-color: bisque;
+}
+
+.title {
+    width: 50%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+.searchbar-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbar {
+    position: relative;
+    width: 70%;
+    height: 60%;
+    border-radius: 25px;
+    border: 2px solid;
+    padding: 0 15px;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    height: 1125px;
+}
+
+.left-aside, .right-aside{
+    height: 100%;
+    width: 10%;
+    background-color: rgb(255, 217, 224);
+}
+
+main {
+    width: 80%;
+    display: flex;
+}
+
+.button-right-section, .button-left-section{
+    height: 100%;
+    width: 7.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 217, 224);
+}
+
+.images-container {
+    width: 85%;
+    display: grid;
+    /* grid: repeat(3, 1fr) / auto-flow 25%; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    background-color: rgb(235, 235, 235);
+}
+
+.image {
+    display: block;
+    justify-self: center;
+    align-self: center;
+    /* border: 1px solid; */
+    border-radius: 7.5px;
+    object-fit: contain;
+    transition: all .2s;
+    cursor: pointer;
+    max-height: 250px;
+}
+
+.image:hover {
+    transform: scale(1.05);
+}
+
+.button-left, .button-right {
+    height: 35%;
+    justify-self: center;
+    display: block;
+    width: 90%;
+    background-color: rgb(222, 222, 222);
+    border: 2px solid rgb(77, 77, 77);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.button-left:hover, .button-right:hover {
+    background-color: rgb(194, 194, 194);
+    transform: scale(0.975);
+}
+
+
+footer {
+    display: block;
+    background-color: gray;
+    height: 100px;
+    width: 100%;
+}
+
